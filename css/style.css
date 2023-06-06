@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&display=swap");
+
+body {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    font-family: "Inconsolata", monospace;
+    transition: .5 all;
+}
+
+.container {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding: 0 10px;
+}
+
+.img-block img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+}
+
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border-radius: 30px;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+button.dark-mode {
+    background-color: #fff;
+    color: #333;
+}
+
+.news-card {
+    display: inline-block;
+    max-width: 400px;
+}
+
+.card-img {
+    max-width: 400px;
+    height: 250px;
+}
+
+.publishedData-title {
+    font-size: 13px;
+}
+
+.author-title {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width:1000px) {
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width:870px) {
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        padding: 0 5px;
+    }
+    .news-card {
+        display: inline-block;
+    }
+    
+    .img-block img {
+        width: 350px;
+        height: 250px;
+    }
+    .publishedData-title {
+        font-size: 13px;
+    }
+    
+    .author-title {
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .description-title{
+        max-width: 350px;
+        font-size: 16px;
+    }
+}
